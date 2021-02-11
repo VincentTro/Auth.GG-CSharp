@@ -37,7 +37,7 @@ namespace AuthGG
                 if (!ApplicationSettings.Register)
                 {
                     //Register is disabled in application settings, will show a messagebox that it is not enabled
-                    MessageBox.Show("Register is not enabled, please try again later!", OnProgramStart.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Register is not enabled", OnProgramStart.Name, MessageBoxButton.OK, MessageBoxImage.Error);
                     Process.GetCurrentProcess().Kill(); //closes the application
                 }
                 else
@@ -65,7 +65,7 @@ namespace AuthGG
                 if (!ApplicationSettings.Login)
                 {
                     //Register is disabled in application settings, will show a messagebox that it is not enabled
-                    MessageBox.Show("Login is not enabled, please try again later!", OnProgramStart.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Logging in is disabled", OnProgramStart.Name, MessageBoxButton.OK, MessageBoxImage.Error);
                     Process.GetCurrentProcess().Kill(); //closes the application
                 }
                 else
@@ -85,9 +85,9 @@ namespace AuthGG
                         // Success login stuff goes here
                         Console.ForegroundColor = ConsoleColor.White;
                         API.Log(username, "Logged in!"); //Logs this action to your web-panel, you can do this anywhere and for anything!
-                        Console.WriteLine("***************************************************");
-                        Console.WriteLine("All user information:");
-                        Console.WriteLine("***************************************************");
+                        Console.WriteLine("");
+                        Console.WriteLine("User Info:");
+                        Console.WriteLine("");
                         Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine($"User ID -> {User.ID}");
                         Console.WriteLine($"Username -> {User.Username}");
@@ -146,13 +146,8 @@ namespace AuthGG
         public static void PrintLogo()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine();
-            Console.WriteLine("                                █████╗ ██╗   ██╗████████╗██╗  ██╗    ██████╗  ██████╗ ");
-            Console.WriteLine("                               ██╔══██╗██║   ██║╚══██╔══╝██║  ██║   ██╔════╝ ██╔════╝ ");
-            Console.WriteLine("                               ███████║██║   ██║   ██║   ███████║   ██║  ███╗██║  ███╗");
-            Console.WriteLine("                               ██╔══██║██║   ██║   ██║   ██╔══██║   ██║   ██║██║   ██║");
-            Console.WriteLine("                               ██║  ██║╚██████╔╝   ██║   ██║  ██║██╗╚██████╔╝╚██████╔╝");
-            Console.WriteLine("                               ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝  ╚═════╝ ");
+            Console.WriteLine("Jigsaw");
+            Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
