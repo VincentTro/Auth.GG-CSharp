@@ -14,7 +14,7 @@ namespace AuthGG
         {
 
             //This connects your file to the Auth.GG API, and sends back your application settings and such
-            OnProgramStart.Initialize("APPNAME", "AID", "PROGRAMSECRET", "VERSION");
+            OnProgramStart.Initialize("31501", "Jigsaw", "GU6FJLEODxpk26RplwBsHkM2Y9Rj1ku8w42", "1.0");
             if(ApplicationSettings.Freemode)
             {
                 //Usually when your application doesn't need a login and has freemode enabled you put the code here you want to do
