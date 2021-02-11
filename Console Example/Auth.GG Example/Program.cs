@@ -101,6 +101,21 @@ namespace AuthGG
                         Console.WriteLine($"Last Login -> {User.LastLogin}");
                         Console.WriteLine($"Register Date -> {User.RegisterDate}");
                         Console.WriteLine($"Variable -> {App.GrabVariable("PutVariableSecretHere")}"); // Replace put variable secret here with the secret of the variable in your panel - https://i.imgur.com/v3q2a6e.png
+                        if (User.Rank == 4) {
+                            string userRank = 4    
+                        }else if (User.Rank == 2) {
+                            string userRank = 2
+                        }else {
+                            string userRank = 0
+                        }
+                        if (userRank == 4) {
+                            Console.WriteLine();
+                            Console.WriteLine("")
+                            Console.WriteLine("")
+                            Console.WriteLine("Inject Stable    [1]")
+                            Console.WriteLine("Inject Beta      [2]")
+                            Console.WriteLine("Inject Developer [2]")
+                        }
                     }
                 }
             }
@@ -146,6 +161,7 @@ namespace AuthGG
         public static void PrintLogo()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine();
             Console.WriteLine("Jigsaw");
             Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.White;
