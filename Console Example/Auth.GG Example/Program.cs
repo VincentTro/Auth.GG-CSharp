@@ -166,5 +166,9 @@ namespace AuthGG
             Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.White;
         }
+        public static void InjectStable()
+        {
+        
+        }    
     }
 }
